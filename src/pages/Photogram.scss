@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+
+  align-items: center;
+  flex-direction: column;
+  min-width: 900px;
+  min-height: 100vh;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.search, .search input {
+  min-width: 300px;
+  height: 40px;
+  margin: 20px 16px 20px 0;
+  align-self: flex-end;
+}
+
+.search input, .search input:hover, .search input:focus{
+  border: #8f8f8f solid 1px;
+  border-radius: 5px;
+  outline: none;
+  padding: 0 16px;
+  &::-webkit-search-cancel-button{
+    display: none;
+  }
+}
+
+.filters {
+  margin: 20px;
+  min-height: 30px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.label{
+  position: relative;
+}
+.checkbox {
+  margin: 0 10px;
+  display: none;
+}
+.fake-checkbox{
+  width: 18px;
+  height: 18px;
+  border: #8f8f8f solid 1px;
+  border-radius: 5px;
+  position: absolute;
+  top: 3px;
+  left: -25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:before{
+    content: ''
+
+  }
+  &.checked:after {
+    content: '✓';
+  }
+}
+.label{
+  margin-left: 40px;
+}
+.gallery {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  min-width: 900px;
+  width: 100%;
+  gap: 32px;
+}
+
+.image-container {
+  max-width: 400px;
+  max-height: 500px;
+  position: relative;
+}
+
+.image-container img {
+  max-width: 400px;
+  max-height: 500px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.caption {
+  background-color: black;
+  color: white;
+  border-radius: 50px 0 0 50px;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  padding: 10px 16px 10px 20px;
+  font-size: 18px;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 150px;
+  margin: 20px 0;
+}
+
+.pagination-container button {
+
+}
+
+.pagination-btn {
+  width: 32px;
+  height: 32px;
+  background-color: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  font-size: 18px;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
